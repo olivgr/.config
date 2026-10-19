@@ -1,0 +1,25 @@
+" Restore cursor position when reopening a file
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   execute "normal! g`\"" |
+    \ endif
+
+nnoremap <SPACE> <Nop>
+let mapleader = ' '
+
+source ~/.config/vim/plugins.vim
+source ~/.config/vim/vasp.vim
+
+syntax on
+filetype plugin indent on
+set number
+"set relativenumber
+set hidden
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smartindent
+set showmatch
+set backspace=indent,eol,start
+
+colorscheme unokai
