@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+X="${1:-0}"
+Y="${2:-0}"
+WIDTH="${3:-1920}"
+HEIGHT="${4:-100}"
+
+TMP="$(mktemp --suffix=.png)"
+trap 'rm -f "$TMP"' EXIT
+
+grim -g "${X},${Y} ${WIDTH}x${HEIGHT}" "$TMP"
+
+MEAN="$(
+    magick "$TMP" \
+        -colorspace Gray \
+        -format '%[fx:mean]' \
+        info:
+)"
+
+echo "brightness: $MEAN" >&2
+
+if awk "BEGIN { exit !($MEAN >= 0.40) }"; then
+    echo "light"
+else
+    echo "dark"
+fi
