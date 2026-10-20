@@ -240,7 +240,7 @@ Scope {
                         verticalCenter: parent.verticalCenter
                     }
 
-                    width: 160
+                    width: 200
                     height: 24
 
                     Text {

@@ -6,6 +6,9 @@ autocmd BufReadPost *
 
 nnoremap <SPACE> <Nop>
 let mapleader = ' '
+nnoremap <leader>e :Explore<CR>
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
 
 source ~/.config/vim/plugins.vim
 source ~/.config/vim/vasp.vim
@@ -13,13 +16,16 @@ source ~/.config/vim/vasp.vim
 syntax on
 filetype plugin indent on
 set number
-"set relativenumber
 set hidden
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set clipboard=unnamedplus
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set smartindent
 set showmatch
 set backspace=indent,eol,start
+set undofile
+set undodir=~/.config/vim/undo//
+set directory=~/.config/vim/swap//
 
 colorscheme unokai
