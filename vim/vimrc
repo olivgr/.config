@@ -23,6 +23,8 @@ set shiftwidth=2
 set softtabstop=2
 set smartindent
 set showmatch
+set hlsearch
+set ignorecase
 set backspace=indent,eol,start
 set undofile
 set undodir=~/.config/vim/undo//
