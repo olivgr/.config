@@ -59,7 +59,7 @@ PanelWindow {
             if (event.key === Qt.Key_R) {
                 root.restart()
                 event.accepted = true
-            } else if (event.key === Qt.Key_S) {
+            } else if (event.key === Qt.Key_O) {
                 root.shutdown()
                 event.accepted = true
             } else if (
@@ -85,10 +85,10 @@ PanelWindow {
             id: dialog
 
             anchors.centerIn: parent
-            width: 332
+            width: 232
             height: 78
             radius: 12
-            color: "#1e1e2e"
+            color: "transparent"
             border.color: "#45475a"
             border.width: 1
 
@@ -112,17 +112,11 @@ PanelWindow {
                                 color: "#f38ba8"
                             },
                             {
-                                key: "S",
-                                label: "Shut down",
+                                key: "O",
+                                label: "Turn off",
                                 action: "shutdown",
                                 color: "#fab387"
                             },
-                            {
-                                key: "C",
-                                label: "Cancel",
-                                action: "cancel",
-                                color: "#a6e3a1"
-                            }
                         ]
 
                         delegate: Rectangle {
@@ -143,7 +137,7 @@ PanelWindow {
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     text: modelData.key
                                     color: modelData.color
-                                    font.pixelSize: 18
+                                    font.pixelSize: 20
                                     font.bold: true
                                 }
 
@@ -151,7 +145,7 @@ PanelWindow {
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     text: modelData.label
                                     color: "#cdd6f4"
-                                    font.pixelSize: 11
+                                    font.pixelSize: 14
                                 }
                             }
 

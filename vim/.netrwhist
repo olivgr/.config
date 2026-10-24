@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/etc/polkit-1/rules.d'
+let g:netrw_dirhist_2='/home/oliver/Templates'
 let g:netrw_dirhist_1='/home/oliver/.config/mango'
 let g:netrw_dirhist_0='/home/oliver/Projects/Code/zig/src'
 let g:netrw_dirhist_9='/home/oliver/Projects/Code/zig'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_7='/home/oliver/.wine/drive_c/VASP/script/2026'
 let g:netrw_dirhist_6='/home/oliver/.wine/drive_c/VASP/script'
 let g:netrw_dirhist_5='/home/oliver/.wine/drive_c/VASP'
 let g:netrw_dirhist_4='/home/oliver/Projects/Code/c-learn/cfortran/src'
-let g:netrw_dirhist_3='/home/oliver/.wine/drive_c/VASP/script/barthes'
-let g:netrw_dirhist_2='/home/oliver/.wine/drive_c/VASP/script'
